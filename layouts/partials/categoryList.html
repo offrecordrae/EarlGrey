@@ -1,0 +1,11 @@
+<div class="widget">
+    <div class="widget-title">分類</div>
+    {{range $name, $taxonomy := .Site.Taxonomies.categories}} {{ $cnt := .Count }}
+	    {{ with $.Site.GetPage (printf "/categories/%s" $name) }}
+            <div class="taxo-list">
+		        <a href={{ .RelPermalink }} title="All pages with category <i>{{$name}}</i>">{{$name}}</a>
+		        <sup>{{$cnt}}</sup>
+            </div>
+	   {{end}}
+	{{end}}
+</div>

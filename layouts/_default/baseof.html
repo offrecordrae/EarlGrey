@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<title>{{ block "title" . }}{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}{{ end }}</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--w3 導入樣式-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<!-- 新版fontawesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+<!--google fonts-->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+<!--導入自訂樣式-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="/css/layout.css">
+
+<!--錨點fix-->
+<script src="/js/anchor-fix.js"></script>
+
+<!--BODY-->
+<body class="w3-content" style="max-width:1200px">
+
+<!-- 菜單_寬螢幕 -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+
+    <div class="w3-container w3-display-container w3-padding-16">
+        <!--小螢幕的擦擦按鈕-->
+        <i onclick="w3_close()" class="fas fa-times w3-hide-large w3-button w3-display-topright w3-text-grey"></i>
+        <!--網站標題-->
+        <h3 class="w3-wide w3-hide-small w3-hide-medium nav-site-title">
+            <b><a href="/">{{ .Site.Title }}</a></b>
+        </h3>
+        <!--自訂按鈕-->
+        <div class="w3-wide nav-site-button">
+            <a href="/"><i class="fas fa-moon fa-xs"></i></a>
+            <a href="/"><i class="fas fa-search fa-xs"></i></a>
+        </div>
+    </div>
+    <!-- 導覽 -->
+    <a href="/archives" class="nav-site-list w3-bar-item w3-button w3-padding">年份歸檔</a>
+    <a href="/archives-category"  class="nav-site-list w3-bar-item w3-button w3-padding">分類歸檔</a>
+    <a href="/archives-tag"  class="nav-site-list w3-bar-item w3-button w3-padding">標籤歸檔</a>
+    <!-- widgets -->
+    <div class="w3-padding-32 w3-padding" style="font-weight:bold">
+        {{ partial "toc" . }}
+        {{ partial "recent" . }}
+        {{ partial "categoryList" . }}
+        {{ partial "tagList" . }}
+    </div>
+
+</nav>
+
+<!-- 菜單_小螢幕 -->
+<header class="header-bar w3-hide-large w3-top">
+    <span class="w3-center w3-text-white"><h4 class="header-bar-title"><a href="/">{{ .Site.Title }}</a></h4>
+    <a href="#" class="header-bar-button w3-button w3-padding w3-right w3-text-grey" onclick="w3_open(); return false"><i class="fas fa-bars fa-lg"></i></a></span>
+</header>
+
+<!-- 小螢幕菜單Overlay -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- 內文由此開始 -->
+<div class="w3-main" style="margin-left:270px;">
+    <!--返回頁首錨點--><span id="top"></span>
+
+    <!-- Push down content on small screens -->
+    <div class="w3-hide-large" style="height: 50px"></div>
+
+    <!-- 置頂 -->
+    <header class="w3-container w3-xlarge" id="header-bar">
+        <p class="w3-right w3-wide w3-padding" style="font-size: 0.8rem;" >
+            置頂連結
+        </p>
+    </header>
+
+    <!-- 內文 -->
+    {{ block "main" . }}
+    {{ end }}
+
+    <!-- Footer -->
+    <footer class="w3-padding-64 w3-small w3-center" id="footer">
+    <div class="w3-row-padding">
+    {{ partial "about"}}
+    </div>
+    </footer>
+    <!-- 版權 -->
+    <footer class="footer-copyright w3-center w3-small w3-padding">
+    		&copy; 2020-{{ now.Format "2006" }} {{ .Site.Title }}. Generated with <a href="https://www.off-record.net" target="_blank">Earl Grey theme</a> | <a href="https://gohugo.io/" target="_blank">HUGO</a> | <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank">W3.CSS</a>.
+    </footer>
+
+  <!-- 內文末段 -->
+</div>
+
+<script>
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+<!--其他插件-->
+{{ partial "lightbox" . }}
+{{ partial "gotop" . }}
+{{ partial "linkout" . }}
+{{ partial "mathjax" . }}
+{{ partial "mermaid" . }}
+</body>
+</html>

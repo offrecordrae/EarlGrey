@@ -1,0 +1,13 @@
+{{- $recent := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+{{- $recent_num := (.Site.Params.widgets.recent_num | default 5) }}
+{{- if $recent }}
+
+<div class="widget">
+    <div class="widget-title">最新</div>
+        {{ T "recent_title" }}
+        {{- range first $recent_num $recent }}
+    <div class="taxo-list">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </div>
+    {{- end }}{{- end }}
+</div>

@@ -1,0 +1,20 @@
+{{ define "main" }}
+    <div class="w3-container">
+        <h1 class="archive__title">{{ .Title }}</h1>
+        <hr>
+        <div class="archive-list">
+        {{ range (.Site.RegularPages.GroupByDate "2006") }}
+            <h3>{{ .Key }}</h3>
+            <ul class="archive-list-item w3-padding-8">
+                {{ range .Pages }}{{ if (ne .Params.hidden true) }}
+                <li>
+                    {{.PublishDate.Format "2006-01-02"}} -
+                    <a href="{{.Permalink}}">{{.Title}}</a>
+                </li>
+                {{end}}{{end}}
+            </ul>
+        {{ end }}
+        </div>
+    </div>
+    <hr>
+{{ end }}

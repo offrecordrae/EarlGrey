@@ -1,0 +1,14 @@
+{{ if .Params.mermaid }}
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        // Replace mermaid pre.code to div
+        Array.from(document.getElementsByClassName("language-mermaid")).forEach(
+        (el) => {
+            el.parentElement.outerHTML = `<div class="mermaid">${el.innerText}</div>`;
+            }
+        );
+        mermaid.initialize({
+            theme: 'dark',
+        });
+    </script>
+{{ end }}

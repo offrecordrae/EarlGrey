@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="/css/lightbox.css" />
+<script src="/js/lightbox.min.js"></script>
+
+<script>
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true,
+      'fadeDuration': 400,
+    })
+</script>
+
+<p class="md__image">
+    <a data-lightbox="gallery" href="{{ .Destination | safeURL }}">
+        <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+    </a>
+</p>

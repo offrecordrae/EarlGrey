@@ -1,0 +1,444 @@
+/* font variable */
+/* ============================= */
+
+:root {
+    --fontSans: "Open Sans", Helvetica, Arial, microsoft jhenghei, sans-serif;
+    --fontMono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", microsoft yahei, monospace;
+    --fontThick: Helvetica, Arial, microsoft yahei, sans-serif;
+    --RobotoSans: "Roboto", microsoft yahei, sans-serif;
+    --MontSans: "Montserrat", microsoft yahei, sans-serif;
+}
+
+/* color variable */
+/* ============================= */
+
+:root {
+    --heading-color: #c8c6c1; /* 文字-標題 */
+    --paragraph-color: #d8d7d4; /* 文字-本文 */
+    --meta-color: #717677; /* 文字-日期 */
+    --highlight-color: #a9896c;  /* 醒目色 */
+    --highlight-D-color: #55463a;  /* 醒目色-暗 */
+    --border-color: #55563a;  /* 線條 */
+    --bg-main-color: #2d3031;  /* 背景-主要內容 */
+    --bg-body-color: #282828; /* 背景-整體 */
+    --bg-title-color: #333738; /* 背景-主題條 */
+    --banner-color: #43474a; /* 按鈕和標籤 */
+    --bg-code-color: #272822; /* pre code 區塊背景 */
+}
+
+/* 美化與tweak */
+/* ============================= */
+
+html{
+    scroll-behavior:smooth /* 平滑捲動 */
+}
+a {
+    transition:all .1s ease-in-out /* 平滑變色 */
+}
+body {
+    overflow-x: hidden; /* 去除水平捲軸 */
+}
+img {
+    max-width: 100%;
+}
+
+/* 內文-字型 */
+/* ============================= */
+
+body {
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6, .w3-wide, .widget-title {
+    font-family: "Montserrat", Microsoft YaHei, sans-serif;
+}
+.nav-site-list {
+    font-family: Microsoft YaHei, sans-serif;
+}
+.post-meta, .footer-copyright, {
+    font-family: "Open Sans", Microsoft YaHei, sans-serif;
+}
+.taxo-list, .toc-list {
+    font-family: "Roboto", Microsoft YaHei, sans-serif;
+    font-weight: bold;
+}
+div.content, .post-summary {
+    font-size: 16px;
+    font-family: "Roboto", Helvetica, Arial, microsoft jhenghei, sans-serif;
+}
+h4, h5, h6 {
+    font-weight: bold;
+}
+
+/* 內文-顏色 */
+/* ============================= */
+
+.post-title, h1, h2, h3, h4, h5, h6, .post-title a, .header a {
+     color: var(--heading-color);
+}
+a {
+    color: var(--highlight-color);
+}
+p, ul, li {
+    color: var(--paragraph-color);
+}
+
+/* 內文-連結樣式 */
+/* ============================= */
+
+a {
+    text-decoration: none;
+}
+.post-title a:hover {
+    color: var(--highlight-color);
+}
+p a:hover {
+    color: var(--highlight-color);
+    text-decoration: underline;
+}
+li a:hover {
+    text-decoration: underline;
+}
+
+/* 內文-其他樣式 */
+/* ============================= */
+
+/* 定義樣式 */
+dl, dt, dd {
+    color: var(--paragraph-color);
+}
+dt {
+    font-weight: bold;
+}
+@media screen and (min-width: 601px) {
+    dl {
+        width: 100%;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+    dt {
+        display: inline-block;
+        vertical-align: text-top;
+        width: 20%;
+        padding-right: 0.75em;
+        margin: 0.5em 0 0.5em 0;
+        font-weight: bold;
+    }
+    dd {
+        display: inline-block;
+        vertical-align: text-top;
+        width: 75%;
+        padding: 0;
+        margin: 0.5em 0 0.5em 0;
+    }
+}
+@media screen and (max-width: 600px) {
+    dd {
+        margin-left: 0;
+        padding-left: 1.6em;
+        border-left: 2px solid var(--bg-title-color);
+    }
+}
+
+/* 引述樣式 */
+blockquote {
+    margin: 8px 0px;
+    padding-left: 16px;
+    border-left: 5px solid var(--banner-color);
+}
+blockquote p {
+    color: var(--heading-color);
+}
+
+/* 縮減小螢幕的縮進 */
+@media screen and (max-width: 700px) {
+    ul { padding-inline-start: 20px; }
+    ol { padding-left: 20px; } /* 腳註 */
+}
+
+/* 腳註 */
+.footnote-ref::before {
+    content: "[";
+}
+.footnote-ref::after {
+    content: "]";
+}
+
+/* 水平線 */
+hr {
+    border: none;
+    border-top: 1px solid var(--highlight-D-color);
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+/* 主欄與菜單背景顏色 */
+/* ============================= */
+
+body, #mySidebar {
+    background-color: var(--bg-main-color);
+}
+
+/* 菜單 */
+/* ============================= */
+
+.nav-site-title a {
+    color: var(--heading-color);
+}
+.nav-site-title a:hover {
+    color: var(--highlight-color);
+}
+.nav-site-button a, .nav-site-list {
+    color: var(--meta-color);
+}
+.nav-site-button a:hover {
+    color: var(--heading-color);
+}
+
+/* 置頂小菜單 */
+.header-bar {
+    background-color: var(--bg-body-color);
+    height: 50px;
+}
+.header-bar-button {
+    position: fixed;
+    top: 7px;
+    right:0;
+}
+.header-bar-title a {
+    color: var(--heading-color);
+}
+.header-bar-title a:hover {
+    color: var(--highlight-color);
+}
+
+/* 捲軸樣式 */
+/* ============================= */
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-body-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--banner-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--meta-color);
+}
+nav::-webkit-scrollbar {
+  width: 5px;
+}
+nav::-webkit-scrollbar-track {
+  background: var(--bg-main-color);
+}
+nav::-webkit-scrollbar-thumb {
+  background: var(--bg-body-color);
+}
+nav::-webkit-scrollbar-thumb:hover {
+  background: var(--meta-color);
+}
+@media screen and (max-width: 992px) {
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+}
+
+/* post-meta */
+/* ============================= */
+
+.icon-time, .icon-tag, .icon-folder {
+    fill: var(--meta-color);
+    width: 13;
+    height: 13;
+    margin-right: 2px;
+    margin-bottom: -2px;
+}
+.post-meta, .post-meta a {
+     color: var(--meta-color);
+     font-size: 13px;
+     padding-top: 16px;
+}
+.post-meta a:hover {
+    color: var(--highlight-color);
+}
+
+/* 原碼區塊 */
+/* ============================= */
+
+pre, code, kbd, samp {
+	font-family: var(--fontMono);
+	font-size: 13px;
+}
+pre, code {
+	background-color: var(--bg-title-color);
+	border: 1px solid var(--banner-color);
+}
+code {
+	padding: 2px 5px;
+	color: var(--paragraph-color);
+}
+pre {
+	display: block;
+	padding: 0;
+	padding: 1.25rem;
+	margin-bottom: 20px;
+	margin-bottom: 1.25rem;
+	overflow: auto;
+	color: var(--paragraph-color);
+}
+pre code {
+	padding: 0;
+	color: inherit;
+	white-space: inherit;
+	background: inherit;
+	border: 0;
+}
+kbd {
+	padding: 2px 3px;
+	color: var(--paragraph-color);
+	background-color: var(--bg-title-color);
+}
+
+/* 表格樣式 */
+/* ============================= */
+
+table {
+    color: var(--paragraph-color);
+    border-collapse: collapse; /* 讓tr得以產生格線 */
+    min-width: 50%;
+}
+tr {
+    border-bottom: 1px solid var(--banner-color);
+}
+td, th {
+    padding: 5px 10px;
+}
+table thead {
+    background: var(--bg-title-color);
+    text-align: left;
+}
+
+/* gist樣式 */
+/* ============================= */
+
+.gist-file tr {
+    border: 0; background: #eee;
+}
+div.gist .gist-file {
+    border: 1px solid var(--meta-color); /*增加外框*/
+}
+
+/* Footer版權 */
+/* ============================= */
+
+.footer-copyright, .footer-copyright a {
+    color: var(--meta-color);
+    background-color: var(--bg-body-color);
+}
+.footer-copyright a:hover {
+    color: var(--highlight-color);
+}
+
+/* 歸檔 */
+/* ============================= */
+
+ul.archive-list-item {
+    column-count: 2;
+}
+@media screen and (max-width: 700px) {
+    ul.archive-list-item {
+        column-count: 1;
+    }
+}
+
+/* 標籤歸檔 */
+.archive-card {
+    display: block;
+    padding: 8px 16px;
+}
+.archive-card-column {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+@media screen and (max-width: 1150px) {
+    .archive-card-column {
+        grid-template-columns: 50% 50%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .archive-card-column {
+        grid-template-columns: 100%;
+    }
+}
+
+/* widget樣式 */
+/* ============================= */
+
+.widget-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--heading-color);
+    padding-bottom: 8px;
+}
+.taxo-list, .taxo-list a {
+    font-size: 14px;
+    color: var(--meta-color);
+}
+.taxo-list a:hover, .taxo-list a:hover {
+    color: var(--heading-color);
+}
+.widget {
+    padding-bottom: 32px;
+    line-height: 1.6rem;
+}
+
+/* Footer插件 */
+
+#footer {
+    background-color: var(--bg-body-color);
+}
+
+/* 目錄 */
+/* ============================= */
+
+.toc, .toc a {
+    font-size: 14px;
+    color: var(--meta-color);
+}
+.toc a:hover {
+    color: var(--paragraph-color);
+}
+.toc-list ul {
+    list-style: none;
+    padding-left: 0px;
+}
+.toc-list ul ul{
+    padding-inline-start: 28px;
+}
+#toc-title {
+    margin-bottom: -8px; /* 縮小目錄標題與清單的莫名間距 */
+}
+
+/* 分頁按鈕 */
+/* ============================= */
+
+.pager-item { color: var(--meta-color); }
+
+/* 返回頁首 */
+/* ============================= */
+
+.gotop, a.gotop:active, a.gotop:visited {
+    color: var(--banner-color);
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    width: 32px;
+    height: 32px;
+    z-index: 999998;
+}
+.gotop:hover {
+    color: var(--highlight-color);
+}

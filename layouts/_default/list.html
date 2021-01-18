@@ -1,0 +1,20 @@
+{{ define "main" }}
+    <div class="w3-container">
+        {{ range .Paginator.Pages }}
+            <div class="post-list">
+                <div class="post-title">
+                    <h1><a href="{{.URL}}">{{.Title}}</a></h1>
+                </div>
+                <div class="post-summary">
+                    {{ .Summary }}
+                </div>
+                {{ partial "post-meta" . }}
+                <hr class="list-hr"></hr>
+            </div>
+          {{ end }}
+      </div>
+
+    <!-- pager -->
+    {{ partial "pager" . }}
+
+{{ end }}

@@ -1,0 +1,27 @@
+{{ define "main" }}
+<section class="w3-container">
+
+    <h1 class="archive__title">{{ .Title }}</h1>
+    <hr>
+    <div class="archive-card-column">
+    {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+    {{ if eq "categories" $taxonomyname }}
+    {{ range $key, $value := $taxonomy.ByCount }}
+
+        <div class="archive-card">
+            <h3 class="archive-card-title">{{ $value.Name }} ({{.Count}})</h3>
+            {{ range $value.Pages }}
+            <li class="archive-card-item">
+
+                <a href="{{.Permalink}}">{{.Title}}</a>
+            </li>
+            {{ end }}
+        </div>
+
+    {{ end }}
+    {{ end }}
+    {{ end }}
+    </div>
+</section>
+<hr>
+{{ end }}

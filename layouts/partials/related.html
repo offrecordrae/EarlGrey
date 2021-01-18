@@ -1,0 +1,11 @@
+<div class= "w3-container w3-padding-32">
+    {{ $related := .Site.RegularPages.Related . | first 6 }}
+        {{ with $related }}
+        <h3>相關文章</h3>
+    <ul>
+        {{ range . }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</div>
