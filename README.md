@@ -22,7 +22,7 @@ Earl Grey是[HUGO靜態網頁生成器](https://gohugo.io/)的佈景主題，響
 透過終端下載Earl Grey
 
 ```
-git clone https://github.com/offrecordrae/EarlGrey themes/EarlGrey
+git clone https://github.com/offrecordrae/EarlGrey.git themes/EarlGrey
 ```
 config.toml
 ```
