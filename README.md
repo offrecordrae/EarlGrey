@@ -1,5 +1,4 @@
 # Earl Grey
----
 
 ## 介紹
 Eral Grey是[HUGO靜態網頁生成器](https://gohugo.io/)的佈景主題，響應式、極簡風格、使用左側欄菜單。一開始單純是做來放置自己的markdown筆記，想想還是就拿來獻醜吧，有需要的歡迎取用，放這邊就是開源的意思，想怎樣修改都行。
@@ -18,8 +17,6 @@ Eral Grey是[HUGO靜態網頁生成器](https://gohugo.io/)的佈景主題，響
 - 支援圖片燈箱：[Simple Lightbox](https://dbrekalo.github.io/simpleLightbox/)
 - 支援數學符號：[MathJax](https://www.mathjax.org/)
 - 支援圖表語言：[Mermaid](https://mermaid-js.github.io/mermaid)
-
----
 
 ## 使用
 
@@ -43,8 +40,6 @@ paginate = 5
 ```
 md文章內容放置路徑：`根目錄/content/posts`
 
----
-
 ## 建置環境
 
 工具 | 提供者 | 版本 | 掛載來源
@@ -64,8 +59,6 @@ CSS框架 | [W3.CSS](https://www.w3schools.com/w3css/) | [4.13](https://www.w3sc
     - Windows 10
     - Android 9、7.1.1
 
----
-
 ## 特別感謝  
 在主題中使用的許多程式語言都取自其他網站。
 
@@ -75,8 +68,6 @@ GO語言相關框架 |  [Hugo theme: Mainroad](https://github.com/Vimux/Mainroad
 MathJax與Mermaid的markup | [零壹軒筆記](https://note.qidong.name/) | 匿蟒
 圖片燈箱 | [Simple Lightbox](https://dbrekalo.github.io/simpleLightbox/) | Damir Breakalo
 分頁器 | [Pagination模版](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/pagination.html) | Joe Mooring、Bjørn Erik Pedersen、Cameron Moore、Mark Mandel、Anthony Fok
-
----
 
 ## 關於我
 
