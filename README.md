@@ -4,7 +4,7 @@ Earl Grey是[HUGO靜態網頁生成器](https://gohugo.io/)的佈景主題，響
 
 ![](Earl-Grey-sample.jpg)
 
-[中文展示頁面](https://dev1913.d3ls83qtpuaitz.amplifyapp.com/)  
+[中文展示頁面](https://master.d18qnttnbbagre.amplifyapp.com/categories/%E7%A4%BA%E4%BE%8B-demo/)  
 緩慢建置ing，有些功能尚未加上去。
 
 **特色**
@@ -17,33 +17,45 @@ Earl Grey是[HUGO靜態網頁生成器](https://gohugo.io/)的佈景主題，響
 - 支援數學符號：[MathJax](https://www.mathjax.org/)
 - 支援圖表語言：[Mermaid](https://mermaid-js.github.io/mermaid)
 
-## 使用
+## 安裝Earl Grey主題
 
 透過終端下載Earl Grey
 
 ```
 git clone https://github.com/offrecordrae/EarlGrey.git themes/EarlGrey
 ```
-config.toml
-```
+修改根目錄/config.toml
+```toml
+baseURL = "/"
+languageCode = "en-us"
+title = "標題"
 theme = "EarlGrey"
-paginate = 5
+
+paginate = 5 # 每頁顯示的文章數
 [markup]
     [markup.goldmark]
     [markup.goldmark.renderer]
-    unsafe = true
+    unsafe = true # 渲染文章內含的html語言
     [markup.tableOfContents]
-    endLevel = 3
+    endLevel = 3 # 目錄生成最後級數
     ordered = false
-    startLevel = 1
+    startLevel = 1 # 目錄生成最首級數
+
 ```
 md文章內容放置路徑：`根目錄/content/posts`
+
+### 增加歸檔頁
+
+至EarlGrey/exampleSite/content中複製以下檔案，放在根目錄/content下。
+- archives.md
+- archives-category.md
+- archives-tag.md
 
 ## 建置環境
 
 工具 | 提供者 | 版本 | 掛載來源
 ---|---|---|---
-靜態網頁生成器 | [HUGO](https://gohugo.io/) | 0.79.1 |
+靜態網頁生成器 | [HUGO](https://gohugo.io/) | 0.80.0 |
 CSS框架 | [W3.CSS](https://www.w3schools.com/w3css/) | [4.13](https://www.w3schools.com/w3css/4/w3.css) | [W3.CSS](https://www.w3schools.com/w3css/w3css_downloads.asp)
 程式腳本 | Javascript | [3.5.1](https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js) | cdnjs
 圖標套件 | FontAwesome | [5.15.1](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css) | cdnjs
@@ -56,7 +68,7 @@ CSS框架 | [W3.CSS](https://www.w3schools.com/w3css/) | [4.13](https://www.w3sc
     - Firefox 84.0.2
 - 系統
     - Windows 10
-    - Android 9、7.1.1
+    - Android 9 | 7.1.1
 
 ## 特別感謝  
 在主題中使用的許多程式語言都取自其他網站。

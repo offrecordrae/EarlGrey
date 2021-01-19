@@ -1,15 +1,14 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "主題示例站"
+title = "標題"
 theme = "EarlGrey"
 
-paginate = 5
-
+paginate = 5 # 每頁顯示的文章數
 [markup]
     [markup.goldmark]
     [markup.goldmark.renderer]
-    unsafe = true
+    unsafe = true # 渲染文章內含的html語言
     [markup.tableOfContents]
-    endLevel = 3
+    endLevel = 3 # 目錄生成最後級數
     ordered = false
-    startLevel = 1
+    startLevel = 1 # 目錄生成最首級數
