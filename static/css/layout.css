@@ -173,6 +173,10 @@ hr {
     margin-bottom: 32px;
 }
 
+/* 在二級標題下加水平線 */
+
+h2 { border-bottom: 1px solid var(--banner-color); padding-bottom: 3px; }
+
 /* 主欄與菜單背景顏色 */
 /* ============================= */
 
