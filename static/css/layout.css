@@ -42,6 +42,10 @@ img {
     max-width: 100%;
 }
 
+.w3-main {
+    transition:height 0s ease-out; /* fix layout shifting */
+}
+
 /* 內文-字型 */
 /* ============================= */
 
@@ -203,7 +207,7 @@ body, #mySidebar {
 /* 置頂小菜單 */
 .header-bar {
     background-color: var(--bg-body-color);
-    height: 50px;
+    min-height: 50px;
 }
 .header-bar-button {
     position: fixed;
@@ -440,7 +444,7 @@ ul.archive-list-item {
     right: 16px;
     bottom: 16px;
     width: 32px;
-    height: 32px;
+    min-height: 32px;
     z-index: 999998;
 }
 .gotop:hover {
