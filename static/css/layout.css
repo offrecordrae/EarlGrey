@@ -17,13 +17,50 @@
     --paragraph-color: #d8d7d4; /* 文字-本文 */
     --meta-color: #717677; /* 文字-日期 */
     --highlight-color: #a9896c;  /* 醒目色 */
-    --highlight-D-color: #55463a;  /* 醒目色-暗 */
+    --highlight-D-color: #55463a;  /* 水平線 */
     --border-color: #55563a;  /* 線條 */
     --bg-main-color: #2d3031;  /* 背景-主要內容 */
-    --bg-body-color: #282828; /* 背景-整體 */
-    --bg-title-color: #333738; /* 背景-主題條 */
-    --banner-color: #43474a; /* 按鈕和標籤 */
-    --bg-code-color: #272822; /* pre code 區塊背景 */
+    --bg-body-color: #282828; /* 背景-塊 */
+    --bg-title-color: #333738; /* code背景 */
+    --banner-color: #43474a; /* 標籤+格線 */
+}
+[data-theme="light"] {
+    --heading-color: #000; /* 文字-標題 */
+    --paragraph-color: #0a0a0a; /* 文字-本文 */
+    --meta-color: #8691a0; /* 文字-日期 */
+    --highlight-color: #115dc6;  /* 醒目色 */
+    --highlight-D-color: #a4002e;  /* 水平線 */
+    --border-color: #a4002e;  /* 線條 */
+    --bg-main-color: #f2f2f2;  /* 背景-主要內容 */
+    --bg-body-color: #fff; /* 背景-塊 */
+    --bg-title-color: #e0e0e0; /* code背景 */
+    --banner-color: #b3b5b7; /* 標籤+格線 */
+}
+
+/* 切換主題鈕 */
+/* ============================= */
+
+.theme-switch input {
+    display: none;
+}
+#theme-btn + label:before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f186";
+    font-weight: 900;
+    font-size: .75em;
+    color: var(--meta-color);
+}
+#theme-btn:checked + label:before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f185";
+    font-weight: 900;
+    font-size: .75em;
+    color: var(--meta-color);
+}
+#theme-btn + label:hover::before {
+    color: var(--heading-color);
+    transition:all .1s ease-in-out;
+    cursor: pointer;
 }
 
 /* 美化與tweak */
@@ -41,9 +78,15 @@ body {
 img {
     max-width: 100%;
 }
-
-.w3-main {
-    transition:height 0s ease-out; /* fix layout shifting */
+.w3-main,#main{
+    transition:margin-left 0s; /* fix content shifting */
+}
+/* 主題切換相關 */
+body, nav {
+    transition: background-color 0.6s ease, color 1s ease; /* 切換主題色漸變 */
+}
+.w3-button {
+    transition: all 0s; /* fix 顏色漸變速度 */
 }
 
 /* 內文-字型 */
