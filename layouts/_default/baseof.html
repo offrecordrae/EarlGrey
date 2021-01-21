@@ -27,7 +27,6 @@
 
 <!-- 菜單_寬螢幕 -->
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
-
     <div class="w3-container w3-display-container w3-padding-16">
         <!--小螢幕的擦擦按鈕-->
         <i onclick="w3_close()" class="fas fa-times w3-hide-large w3-button w3-display-topright w3-text-grey"></i>
@@ -37,7 +36,13 @@
         </h3>
         <!--自訂按鈕-->
         <div class="w3-wide nav-site-button">
-            <a href="/"><i class="fas fa-moon fa-xs"></i></a>
+            <!--主題切換鈕-->
+            <span class="theme-switch">
+                <input type="checkbox" id="theme-btn">
+                <label for="theme-btn"></label>
+            </span>
+            {{ partial "themes" . }}
+            <!--搜尋列-->
             <a href="/"><i class="fas fa-search fa-xs"></i></a>
         </div>
     </div>
@@ -52,7 +57,6 @@
         {{ partial "categoryList" . }}
         {{ partial "tagList" . }}
     </div>
-
 </nav>
 
 <!-- 菜單_小螢幕 -->
@@ -66,7 +70,8 @@
 
 <!-- 內文由此開始 -->
 <div class="w3-main" style="margin-left:270px;">
-    <!--返回頁首錨點--><span id="top"></span>
+    <!--返回頁首錨點-->
+    <span id="top"></span>
 
     <!-- Push down content on small screens -->
     <div class="w3-hide-large" style="min-height: 50px"></div>
@@ -92,20 +97,17 @@
     <footer class="footer-copyright w3-center w3-small w3-padding">
     		&copy; 2020-{{ now.Format "2006" }} {{ .Site.Title }}. Generated with <a href="https://github.com/offrecordrae/EarlGrey" target="_blank">Earl Grey theme</a> | <a href="https://gohugo.io/" target="_blank">HUGO</a> | <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank">W3.CSS</a>.
     </footer>
-
   <!-- 內文末段 -->
 </div>
 
 <script>
-// Open and close sidebar
 function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
 }
-
 function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
 }
 </script>
 
