@@ -4,7 +4,7 @@ Earl Grey是[HUGO靜態網頁生成器](https://gohugo.io/)的佈景主題，響
 
 ![](Earl-Grey-sample.jpg)
 
-[中文展示頁面](https://master.d18qnttnbbagre.amplifyapp.com/categories/%E7%A4%BA%E4%BE%8B-demo/)  
+[中文展示頁面](https://demo.off-record.net)  
 緩慢建置ing，有些功能尚未加上去。
 
 **特色**
@@ -80,6 +80,7 @@ GO語言相關框架 |  [Hugo theme: Mainroad](https://github.com/Vimux/Mainroad
 MathJax與Mermaid的markup | [零壹軒筆記](https://note.qidong.name/) | 匿蟒
 圖片燈箱 | [Simple Lightbox](https://dbrekalo.github.io/simpleLightbox/) | Damir Breakalo
 分頁器 | [Pagination模版](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/pagination.html) | Joe Mooring、Bjørn Erik Pedersen、Cameron Moore、Mark Mandel、Anthony Fok
+亮暗色系切換 |[dev.to/ananyaneogi](https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8)| Ananya Neogi
 
 ## 關於我
 
