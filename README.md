@@ -81,6 +81,7 @@ MathJax與Mermaid的markup | [零壹軒筆記](https://note.qidong.name/) | 匿�
 圖片燈箱 | [Simple Lightbox](https://dbrekalo.github.io/simpleLightbox/) | Damir Breakalo
 分頁器 | [Pagination模版](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/pagination.html) | Joe Mooring、Bjørn Erik Pedersen、Cameron Moore、Mark Mandel、Anthony Fok
 亮暗色系切換 |[dev.to/ananyaneogi](https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8)| Ananya Neogi
+外部連結開新分頁 | [Victor Hung's Diary](https://diary.taskinghouse.com/posts/2190580-how-to-make-external-links-automatically-open-in-new-tab-in-my-website/) | Victor Hung
 
 ## 關於我
 
