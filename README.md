@@ -58,7 +58,7 @@ md文章內容放置路徑：`根目錄/content/posts`
 ---|---|---|---
 靜態網頁生成器 | [HUGO](https://gohugo.io/) | 0.80.0 |
 CSS框架 | [W3.CSS](https://www.w3schools.com/w3css/) | [4.13](https://www.w3schools.com/w3css/4/w3.css) | [W3.CSS](https://www.w3schools.com/w3css/w3css_downloads.asp)
-程式腳本 | Javascript | [3.5.1](https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js) | cdnjs
+程式腳本 | JQuery | [3.5.1](https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js) | cdnjs
 圖標套件 | FontAwesome | [5.15.1](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css) | cdnjs
 
 ## 測試環境
