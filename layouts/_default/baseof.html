@@ -35,15 +35,18 @@
             <b><a href="/">{{ .Site.Title }}</a></b>
         </h3>
         <!--自訂按鈕-->
-        <div class="w3-wide nav-site-button">
-            <!--主題切換鈕-->
-            <span class="theme-switch">
-                <input type="checkbox" id="theme-btn">
-                <label for="theme-btn"></label>
-            </span>
-            {{ partial "themes" . }}
-            <!--搜尋列-->
-            <a href="/"><i class="fas fa-search fa-xs"></i></a>
+        <div class="w3-wide nav-site-button mini-widget">
+            <form class="w3-wide search-form" action="/search/" role="search">
+                <!--主題切換鈕-->
+                <span class="theme-switch">
+                    <input type="checkbox" id="theme-btn">
+                    <label for="theme-btn"></label>
+                    {{ partial "themes" . }}
+                </span>
+                <!-- 搜尋列 -->
+                <button type="submit" class="fas fa-search fa-xs"></button>
+                <input autocomplete="off" placeholder="..." type="text" name="q">
+            </form>
         </div>
     </div>
     <!-- 導覽 -->
@@ -77,8 +80,8 @@
     <div class="w3-hide-large" style="min-height: 50px"></div>
 
     <!-- 置頂 -->
-    <header class="w3-container w3-xlarge" id="header-bar">
-        <p class="w3-right w3-wide w3-padding" style="font-size: 0.8rem;" >
+    <header class="w3-container" id="header-bar">
+        <p class="w3-right w3-wide w3-padding" style="font-size: 0.8rem">
             置頂連結
         </p>
     </header>
@@ -87,7 +90,7 @@
     {{ block "main" . }}
     {{ end }}
 
-    <!-- Footer -->
+    <!-- 頁腳 -->
     <footer class="w3-padding-64 w3-small w3-center" id="footer">
     <div class="w3-row-padding">
     {{ partial "about"}}
