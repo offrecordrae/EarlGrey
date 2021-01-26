@@ -1,0 +1,10 @@
+{{- $.Scratch.Add "index" slice -}}
+
+{{- range where .Site.RegularPages "Type" "posts" -}}
+{{- if and (not .Draft) (not .Params.private) -}}
+{{- $.Scratch.Add "index" (dict "title" .Title "url" .Permalink "content" (.Content | plainify) "tag" .Params.Tags "category" .Params.Categories) -}}
+
+{{- end -}}
+{{- end -}}
+
+{{- $.Scratch.Get "index" | jsonify -}}
