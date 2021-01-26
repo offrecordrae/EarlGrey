@@ -1,0 +1,54 @@
+{{define "main"}}
+
+<!--引入函式庫-->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css">
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4"></script>
+
+<!--內文開始-->
+<section class="w3-container">
+    <h4>{{ .Title }}</h4>
+    <!--搜索結果-->
+    <div id="hits">
+    </div>
+    <div id="pagination">
+    </div>
+    <br>
+</section>
+
+<!--本地程式腳本-->
+<script src="/js/algolia-hitTemplate.js"></script>
+<script>
+    const search = instantsearch({
+        appId: '{{ .Site.Params.algolia.appId }}',
+        apiKey: '{{ .Site.Params.algolia.searchOnlyKey }}',
+        indexName: '{{ .Site.Params.algolia.indexName }}',
+        urlSync: true,
+        highlightPreTag: '<hit>',
+        searchFunction: function (helper) {
+            if (helper.state.query === '') {
+            document.querySelector('#hits').innerHTML = '';
+            return;
+            }
+        helper.search();
+    }
+    });
+    search.addWidget(
+    instantsearch.widgets.hits({
+        container: '#hits',
+        templates: {
+        empty: '無符合結果',
+        item: hitTemplate,
+        }
+    })
+    );
+    search.start();
+</script>
+
+<!--搜索結果樣式-->
+<style>
+    .hit-highlight {color:var(--hit-color);}
+    .hit-title h2:hover {color:var(--highlight-color);}
+</style>
+
+{{end}}
