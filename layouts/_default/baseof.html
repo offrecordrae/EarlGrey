@@ -39,13 +39,13 @@
             <form class="w3-wide search-form" action="/search/" role="search">
                 <!--主題切換鈕-->
                 <span class="theme-switch">
-                    <input type="checkbox" id="theme-btn">
+                    <input type=checkbox id="theme-btn">
                     <label for="theme-btn"></label>
                     {{ partial "themes" . }}
                 </span>
                 <!-- 搜尋列 -->
-                <button type="submit" class="fas fa-search fa-xs"></button>
-                <input autocomplete="off" placeholder="..." type="text" name="q">
+                <button type=submit class="fas fa-search fa-xs"></button>
+                <input type=text autocomplete="off" placeholder="..." name="q">
             </form>
         </div>
     </div>

@@ -492,12 +492,12 @@ ul.archive-list-item {
     outline: none;
     background-color: var(--bg-body-color);
 }
-.search-form button[type="submit"] {
+.search-form button[type=submit] {
     color: var(--meta-color);
     border: none;
     background-color: var(--bg-main-color);
 }
-.search-form button[type="submit"]:hover {
+.search-form button[type=submit]:hover {
     color: var(--highlight-color);
     cursor: pointer;
 }
