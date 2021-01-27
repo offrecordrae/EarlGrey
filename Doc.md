@@ -96,7 +96,7 @@ indexName = "indices內的index名稱"
 ### Hightlighting
 
 - Attributes to highlight選擇category、content、tag、title。
-- Hightlight prefix tag輸入`<span class="hit-highlight"`
+- Hightlight prefix tag輸入`<span class="hit-highlight">`
 - Hightlight postfix tag輸入`</span>`
 
 ### Snippeting
