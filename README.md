@@ -10,7 +10,7 @@ Earl Grey是[HUGO靜態網頁生成器](https://gohugo.io/)的佈景主題，響
 **特色**
 - 響應式，側欄在螢幕寬度低於992px會自動隱藏
 - 亮暗色系切換
-- 支援Algolia-InstantSearch.js站內搜索
+- 支援[Algolia](https://www.algolia.com/)-[InstantSearch.js](https://community.algolia.com/instantsearch.js/)站內搜索
 - 自動生成文章目錄，閱覽文章時可隨時從側欄查看目錄
 - 支援分類(category)、標籤(tag)
 - 三種歸檔頁(archive)：按照年份分組、按照分類分組、按照標籤分組
@@ -32,26 +32,26 @@ baseURL = "/"
 languageCode = "en-us"
 title = "標題"
 theme = "EarlGrey"
-
 paginate = 5 # 每頁顯示的文章數
-[markup]
-    [markup.goldmark]
-    [markup.goldmark.renderer]
-    unsafe = true # 渲染文章內含的html語言
-    [markup.tableOfContents]
-    endLevel = 3 # 目錄生成最後級數
-    ordered = false
-    startLevel = 1 # 目錄生成最首級數
 
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true # 渲染文章內含的html語言
+[markup.tableOfContents]
+endLevel = 3 # 目錄生成最後級數
+ordered = false
+startLevel = 1 # 目錄生成最首級數
 ```
 md文章內容放置路徑：`根目錄/content/posts`
 
 ### 增加歸檔頁
 
-至EarlGrey/exampleSite/content中複製以下檔案，放在根目錄/content下。
-- archives.md
-- archives-category.md
-- archives-tag.md
+操作步驟請參考[主題說明頁](/Doc.md)。
+
+### 安裝站內搜索
+
+操作步驟請參考[主題說明頁](/Doc.md)。
 
 ## 建置環境
 
