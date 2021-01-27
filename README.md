@@ -4,7 +4,7 @@ Earl Grey是[HUGO靜態網頁生成器](https://gohugo.io/)的佈景主題，響
 
 ![](Earl-Grey-sample.jpg)
 
-<a href="https//demo.off-record.net"><h3><u>[中文展示頁面]</u></h3></a>
+<a href="https://demo.off-record.net"><h3><u>[中文展示頁面]</u></h3></a>
 緩慢建置ing，有些功能尚未加上去。
 
 **特色**
