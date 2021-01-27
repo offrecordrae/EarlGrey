@@ -4,13 +4,13 @@ Earl Grey是[HUGO靜態網頁生成器](https://gohugo.io/)的佈景主題，響
 
 ![](Earl-Grey-sample.jpg)
 
-[中文展示頁面](https://demo.off-record.net)  
+<a href="https//demo.off-record.net"><h3><u>[中文展示頁面]</u></h3></a>
 緩慢建置ing，有些功能尚未加上去。
 
 **特色**
 - 響應式，側欄在螢幕寬度低於992px會自動隱藏
 - 亮暗色系切換
-- 支援[Algolia](https://www.algolia.com/)-[InstantSearch.js](https://community.algolia.com/instantsearch.js/)站內搜索
+- 支援[Algolia](https://www.algolia.com/)站內搜索
 - 自動生成文章目錄，閱覽文章時可隨時從側欄查看目錄
 - 支援分類(category)、標籤(tag)
 - 三種歸檔頁(archive)：按照年份分組、按照分類分組、按照標籤分組
